@@ -11,7 +11,6 @@ Fast content Discovery
 
 ## Installation
 
-Install my-project with npm
 
 ```bash
   git clone https://github.com/crypticq/Async_adminFinder.git
