@@ -18,7 +18,7 @@ Install my-project with npm
   cd Async_adminFinder
   python3 main.py -u url -f yourfile
   ex:
-  python3 main.py -u http://testphp.vulnweb.com/ -f /usr/share/seclists/Discovery/Web-Content/common.txt
+  python3 main.py -u http://testphp.vulnweb.com/ -f big.txt
 
 ```
     
