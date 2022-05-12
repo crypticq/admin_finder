@@ -31,7 +31,7 @@ headers = {
 
 
 
-def check_status(site,pip):
+def check_proxy(site,pip):
 	try:
 		global founds
 
@@ -55,8 +55,10 @@ def check_status(site,pip):
 			founds.append(r.url)
 
 
-		else:
+		elif http > 500:
+			pass
 
+		else:
 			print ('  \033[1;31m[-]\033[1;m %s'% r.url)
 			founds.append(r.url)
 			
@@ -91,7 +93,7 @@ if __name__ == '__main__':
 	for paths in wordf:
 		#for paths in wordf:
 
-	    thread = Thread( target=check_status, args=(url,paths.strip(),))
+	    thread = Thread( target=check_proxy, args=(url,paths.strip(),))
 	    thread.start()
 	    threads.append(thread)
 
