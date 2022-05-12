@@ -87,6 +87,9 @@ files = args.fileinput
 if __name__ == '__main__':
 	if not url.startswith('http') or url.startswith('https'):
 		url = 'http://' + url
+	
+	if url.endswith('/'):
+		url = url.strip('/')
 	wordf = open(files , 'r').read().splitlines()
 	threads = []
 
