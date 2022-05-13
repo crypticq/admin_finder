@@ -31,13 +31,13 @@ headers = {
 
 
 
-def check_proxy(site,pip):
+def buster(site,dir):
 	try:
 		global founds
 
 		founds = []
 
-		r = requests.get('{}/{}'.format(site,pip) , headers=headers , verify=False)
+		r = requests.get('{}/{}'.format(site,dir) , headers=headers , verify=False)
 		
 		http = r.status_code 
 
@@ -96,7 +96,7 @@ if __name__ == '__main__':
 	for paths in wordf:
 		#for paths in wordf:
 
-	    thread = Thread( target=check_proxy, args=(url,paths.strip(),))
+	    thread = Thread( target=buster, args=(url,paths.strip(),))
 	    thread.start()
 	    threads.append(thread)
 
