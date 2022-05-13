@@ -14,10 +14,19 @@ Fast content Discovery
 
 ```bash
   git clone https://github.com/crypticq/Async_adminFinder.git
-  cd Async_adminFinder
-  python3 main.py -u url -f yourfile
-  ex:
-  python3 main.py -u http://testphp.vulnweb.com/ -f big.txt
-
 ```
-    
+```bash
+cd Async_adminFinder
+```
+```bash
+pip3 install -r requirements.txt
+```
+
+```bash
+python3 main.py -u targeturl -f yourfile -t threads number
+```
+```bash
+example : python3 main.py -u http://testphp.vulnweb.com -f common.txt -t 60
+```
+
+ 
