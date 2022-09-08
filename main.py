@@ -42,11 +42,7 @@ headers = {
 
 
 
-def quick_check(url):
-    r = requests.get(url , headers=headers , verify=False)
-    soup = BeautifulSoup(r.text , 'lxml')
-    if soup is not None:
-        return soup.title.text
+
 
 
 
