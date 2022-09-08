@@ -58,7 +58,7 @@ def buster(site):
              soup = BeautifulSoup(r.text , 'lxml').title.text
              if "index of" in soup.lower():
                  s = "\U0001f600"
-                 print(f"{style.YELLOW} low haning fruit !! {r.url} check thgis out {s} ")
+                 print(f"{style.YELLOW} low hanging fruit !! {r.url} check thgis out {s} ")
              print (style.CYAN , '[*] -> link {0} [*] | [*] status - > {1} [*]  |  Title -> {2}  [*]'.format(r.url,r.status_code,soup))
 
         elif r.status_code <= 399:
