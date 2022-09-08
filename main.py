@@ -66,7 +66,7 @@ def buster(site):
         elif r.status_code == 403:
             print(f"{style.RED} rescource found but need Authorization {r.url}")
         elif r.status_code == 405:
-            print(f"{style.RED} rescource found but method not found {r.url}")
+            print(f"{style.RED} rescource found but method not Allowed {r.url} ,  you should try other Methods like [post,head,delete]")
         
         elif r.status_code == 429:
             print(f"{style.RED} too many requests sleeping for 3 seconds")
