@@ -61,7 +61,7 @@ def buster(site):
                  print(f"{style.YELLOW} low hanging fruit !! {r.url} check this out {s} ")
              print (style.CYAN , '[*] -> link {0} [*] | [*] status - > {1} [*]  |  Title -> {2}  [*]'.format(r.url,r.status_code,soup))
 
-        elif r.status_code <= 399:
+        elif r.status_code >= 300 and r.status_code <= 399:
             print(f"{style.CYAN} redirection: {r.url} -> {r.status_code}")
         elif r.status_code == 403:
             print(f"{style.RED} rescource found but need Authorization {r.url}")
